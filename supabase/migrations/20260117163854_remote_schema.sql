@@ -118,11 +118,13 @@ alter table "public"."couple" drop constraint "couple_partner1_id_fkey";
 
 alter table "public"."couple" drop constraint "couple_partner2_id_fkey";
 
+drop trigger if exists "on_auth_user_created" on "auth"."users";
+
+drop function if exists "public"."handle_new_user"();
+
 drop function if exists "public"."auto_link_partner_by_email"(user_id uuid, user_email text);
 
 drop function if exists "public"."check_user_single_relationship"();
-
-drop function if exists "public"."handle_new_user"();
 
 drop function if exists "public"."update_updated_at_column"();
 
@@ -141,7 +143,3 @@ drop index if exists "public"."relationships_pkey";
 drop table "public"."account";
 
 drop table "public"."couple";
-
-drop trigger if exists "on_auth_user_created" on "auth"."users";
-
-

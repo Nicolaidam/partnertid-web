@@ -53,25 +53,25 @@ CREATE OR REPLACE FUNCTION public.auto_link_partner_by_email(user_id uuid, user_
  SECURITY DEFINER
 AS $function$
 DECLARE
-  pending_relationship_id UUID;
+  pending_couple_id UUID;
 BEGIN
-  SELECT r.id INTO pending_relationship_id
-  FROM public.relationships r
-  JOIN public.profiles p ON r.user1_id = p.id
-  WHERE LOWER(p.invited_email) = LOWER(user_email)
-    AND r.user2_id IS NULL
-    AND r.user1_id != user_id
+  SELECT c.id INTO pending_couple_id
+  FROM public.couple c
+  JOIN public.account a ON c.partner1_id = a.id
+  WHERE LOWER(a.invited_partner_email) = LOWER(user_email)
+    AND c.partner2_id IS NULL
+    AND c.partner1_id != user_id
   LIMIT 1;
 
-  IF pending_relationship_id IS NOT NULL THEN
-    UPDATE public.relationships
-      SET user2_id = user_id
-      WHERE id = pending_relationship_id;
+  IF pending_couple_id IS NOT NULL THEN
+    UPDATE public.couple
+      SET partner2_id = user_id
+      WHERE id = pending_couple_id;
 
-    UPDATE public.profiles
-      SET invited_email = NULL
+    UPDATE public.account
+      SET invited_partner_email = NULL
       WHERE id = (
-        SELECT user1_id FROM public.relationships WHERE id = pending_relationship_id
+        SELECT partner1_id FROM public.couple WHERE id = pending_couple_id
       );
   END IF;
 END;
@@ -84,19 +84,19 @@ CREATE OR REPLACE FUNCTION public.check_user_single_relationship()
 AS $function$
 BEGIN
   IF EXISTS (
-    SELECT 1 FROM public.relationships
+    SELECT 1 FROM public.couple
     WHERE id IS DISTINCT FROM NEW.id
-      AND (user1_id = NEW.user1_id OR user2_id = NEW.user1_id)
+      AND (partner1_id = NEW.partner1_id OR partner2_id = NEW.partner1_id)
   ) THEN
-    RAISE EXCEPTION 'User % already has a relationship', NEW.user1_id;
+    RAISE EXCEPTION 'User % already has a relationship', NEW.partner1_id;
   END IF;
 
-  IF NEW.user2_id IS NOT NULL AND EXISTS (
-    SELECT 1 FROM public.relationships
+  IF NEW.partner2_id IS NOT NULL AND EXISTS (
+    SELECT 1 FROM public.couple
     WHERE id IS DISTINCT FROM NEW.id
-      AND (user1_id = NEW.user2_id OR user2_id = NEW.user2_id)
+      AND (partner1_id = NEW.partner2_id OR partner2_id = NEW.partner2_id)
   ) THEN
-    RAISE EXCEPTION 'User % already has a relationship', NEW.user2_id;
+    RAISE EXCEPTION 'User % already has a relationship', NEW.partner2_id;
   END IF;
 
   RETURN NEW;
@@ -110,7 +110,7 @@ CREATE OR REPLACE FUNCTION public.handle_new_user()
  SECURITY DEFINER
 AS $function$
 BEGIN
-  INSERT INTO public.profiles (id, email)
+  INSERT INTO public.account (id, email)
   VALUES (NEW.id, NEW.email);
 
   PERFORM public.auto_link_partner_by_email(NEW.id, NEW.email);
@@ -355,5 +355,4 @@ CREATE TRIGGER enforce_single_relationship_per_user BEFORE INSERT OR UPDATE ON p
 CREATE TRIGGER update_relationships_updated_at BEFORE UPDATE ON public.couple FOR EACH ROW EXECUTE FUNCTION public.update_updated_at_column();
 
 CREATE TRIGGER on_auth_user_created AFTER INSERT ON auth.users FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
-
 
