@@ -36,10 +36,10 @@ const StickyCTA = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-3">
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-foreground font-cormorant truncate">
+            <p className="text-sm font-medium text-foreground font-body truncate">
               Start jeres rejse sammen
             </p>
-            <p className="text-xs text-muted-foreground font-cormorant">
+            <p className="text-xs text-muted-foreground font-body">
               Første måned gratis
             </p>
           </div>

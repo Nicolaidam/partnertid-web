@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Heart className="h-5 w-5 mr-1 text-brand-warm" strokeWidth={2} />
-                <span className="text-xl font-cormorant font-medium tracking-wider text-primary">Partnertid</span>
+                <span className="text-xl font-body font-medium tracking-wider text-primary">Partnertid</span>
               </Link>
             </div>
             <div className="hidden md:block">

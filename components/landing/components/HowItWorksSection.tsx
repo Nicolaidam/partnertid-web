@@ -42,10 +42,10 @@ const HowItWorksSection = () => {
     <section id="howitworks" className="py-24 bg-gradient-to-b from-white via-brand-sand/5 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-5xl font-cormorant font-extrabold text-foreground max-w-3xl mx-auto leading-tight">
+          <h1>
             Jeres ugentlige <span className="text-brand-warm">rutine</span>
-          </h2>
-          <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto font-cormorant">
+          </h1>
+          <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto font-body">
             Ligesom du tager en vitaminpille hver dag, er Partnertid jeres ugentlige check-in. 
             En fast rutine der styrker jeres forhold gennem konsistent praksis.
           </p>
@@ -89,7 +89,7 @@ const HowItWorksSection = () => {
           <div className="col-span-1 animate-scale-in" style={{ animationDelay: "0.5s" }}>
             <Card className="h-full bg-gradient-to-br from-white to-brand-sand/10 border border-brand-sand/30 shadow-md overflow-hidden">
               <CardHeader className="pb-2">
-                <CardTitle className="text-xl font-cormorant font-extrabold">Eksempel på ugentlig check-in</CardTitle>
+                <CardTitle className="text-xl font-body font-extrabold">Eksempel på ugentlig check-in</CardTitle>
                 <CardDescription>Se hvordan jeres ugentlige rutine kan se ud</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -103,7 +103,7 @@ const HowItWorksSection = () => {
                   <CardContent className="pt-0">
                     <ul className="space-y-3">
                       <li className="bg-muted/30 p-3 rounded-lg text-sm border border-muted/50">
-                        <p className="font-cormorant italic text-foreground">
+                        <p className="font-body italic text-foreground">
                           &quot;I har begge udtrykt et ønske om mere nærvær i hverdagen. Hvordan ser meningsfuld tid sammen ud for hver af jer?&quot;
                         </p>
                       </li>

@@ -65,26 +65,49 @@
 
 /* Typography styles */
 @layer base {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
     * {
         @apply border-border;
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-body font-medium text-body leading-relaxed;
         font-feature-settings: "liga", "kern";
     }
 
-    /* Typography hierarchy */
-    h1, h2, h3, h4 {
-        @apply font-playfair font-medium;
+    a {
+        @apply text-primary hover:text-primary/90 transition-colors;
     }
 
-    h5, h6 {
-        @apply font-medium;
+    h1 {
+        @apply font-display text-4xl md:text-5xl lg:text-5xl font-normal tracking-tight leading-tight;
+    }
+
+    h2 {
+        @apply font-display text-3xl md:text-4xl font-normal tracking-tight leading-snug;
+    }
+
+    h3 {
+        @apply font-display text-2xl md:text-3xl font-normal leading-snug;
+    }
+
+    h4 {
+        @apply font-display text-xl font-semibold leading-snug tracking-wide;
+    }
+
+    h5 {
+        @apply font-display text-lg font-semibold uppercase tracking-wider;
+    }
+
+    h6 {
+        @apply font-display text-base font-semibold uppercase tracking-[0.3em];
     }
 
     p {
-        @apply font-cormorant text-lg;
+        @apply font-body text-lg;
     }
 }
 
@@ -92,7 +115,7 @@
 @layer components {
     /* Navigation */
     .nav-link {
-        @apply text-foreground/80 hover:text-foreground transition-colors px-3 py-2 rounded-md text-lg font-cormorant tracking-wide;
+        @apply text-foreground/80 hover:text-foreground transition-colors px-3 py-2 rounded-md text-lg font-body tracking-wide;
     }
 
     /* Effects and utilities */

@@ -8,10 +8,10 @@ const PricingSection = () => {
     <section id="pricing" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-cormorant font-extrabold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
             En investering i jeres forholds sundhed
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto font-cormorant">
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto font-body">
             Alle parforhold med intention om at blive sammen bør arbejde på det. Ligesom du investerer i din egen sundhed, 
             er Partnertid en investering i jeres forholds velvære – en ugentlig rutine der forebygger problemer og styrker jeres forbindelse.
           </p>
@@ -26,12 +26,12 @@ const PricingSection = () => {
                   <div className="bg-brand-warm/20 p-3 rounded-full mr-4">
                     <Heart className="h-7 w-7 text-brand-warm" strokeWidth={1.5} fill="#E9985A" />
                   </div>
-                  <h3 className="text-2xl font-cormorant font-extrabold">Partnertid</h3>
+                  <h3 className="text-2xl font-extrabold">Partnertid</h3>
                 </div>
                 
                 <div className="mb-8">
                   <div className="flex items-baseline mb-2">
-                    <span className="text-4xl font-bold">69 kr</span>
+                    <span className="text-4xl">69 kr</span>
                     <span className="text-lg text-muted-foreground ml-2">/måned</span>
                   </div>
                   <p className="text-brand-warm font-medium">
@@ -39,7 +39,7 @@ const PricingSection = () => {
                   </p>
                 </div>
                 
-                <div className="font-cormorant text-lg mb-8">
+                <div className="font-body text-lg mb-8">
                   <p>
                     Ligesom en vitaminpille hver dag holder dig sund, holder Partnertid jeres forhold stærkt. 
                     En ugentlig rutine der passer ind i jeres liv – for alle par der vil hinanden.
@@ -53,7 +53,8 @@ const PricingSection = () => {
                 </div>
                 
                 <Button
-                  className="w-full hover:bg-brand-warm-dark rounded-xl py-6 text-lg font-bold font-cormorant"
+                  size="xl"
+                  className="w-full hover:bg-brand-warm-dark rounded-xl"
                   asChild
                 >
                   <Link href="/auth/sign-up">
@@ -64,7 +65,7 @@ const PricingSection = () => {
               
               {/* Middle Column - Features */}
               <div className="p-8 md:p-10 bg-white md:col-span-2">
-                <h4 className="font-extrabold text-lg mb-6 font-cormorant">Det får I:</h4>
+                <h4 className="font-extrabold text-lg mb-6">Det får I:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
                     {
@@ -100,7 +101,7 @@ const PricingSection = () => {
                       </div>
                       <div>
                         <h5 className="font-medium text-foreground">{feature.title}</h5>
-                        <p className="font-cormorant text-muted-foreground">{feature.description}</p>
+                        <p className="font-body text-muted-foreground">{feature.description}</p>
                       </div>
                     </div>
                   ))}
@@ -117,7 +118,7 @@ const PricingSection = () => {
           </Card>
           
           <div className="mt-12 text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100/50 max-w-2xl mx-auto">
-            <p className="text-muted-foreground font-cormorant text-lg italic">
+            <p className="text-muted-foreground font-body text-lg italic">
               &quot;Et parforhold er en muskel der skal trænes. Ligesom du tager en vitaminpille hver dag, 
               bør I hver uge kigge hinanden i øjnene og være der for hinanden. Det er ikke terapi – det er vedligeholdelse.&quot;
             </p>

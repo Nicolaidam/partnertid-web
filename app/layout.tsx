@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Cormorant_Garamond, Playfair_Display } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
@@ -58,10 +58,19 @@ export const metadata: Metadata = {
   },
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const displayFont = Playfair_Display({
+  variable: "--font-display",
   display: "swap",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const bodyFont = Cormorant_Garamond({
+  variable: "--font-body",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export default function RootLayout({
@@ -71,7 +80,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body
+        className={`${displayFont.variable} ${bodyFont.variable} font-body antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

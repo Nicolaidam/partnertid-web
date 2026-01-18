@@ -24,21 +24,21 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 pt-20 md:pt-32 pb-20 md:pb-32 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
           <div className="text-center md:text-left space-y-8">
-            <h1 className="text-7xl md:text-7xl lg:text-6xl font-cormorant font-extrabold text-foreground leading-tight mb-8">
-              <span className="block">Prioritér det vigtigste</span>
+            <h1 className="mb-8">
+              <span className="block">Den største gave du kan give</span>
               <span className="block italic text-brand-warm mt-3">
-              Jeres kærlighed til hinanden
+              er at forstå.
               </span>
             </h1>
             
-            <p className="text-xl md:text-lg text-foreground/70 max-w-xl mx-auto md:mx-0 font-cormorant mb-12 leading-relaxed">
+            <p className="mb-12">
             Stærke forhold sker ikke af sig selv. Ligesom alt andet der betyder noget, har kærligheden brug for opmærksomhed. Partnertid giver jer en enkel, ugentlig rutine, der forebygger afstand og styrker jeres forbindelse.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
               <Button
-                size="lg" 
-                className="py-6 px-8 text-lg min-h-[56px]"
+                size="xl" 
+                className="font-black"
                 asChild
               >
                 <Link href="/auth/sign-up">
@@ -47,16 +47,15 @@ const HeroSection = () => {
                 </Link>
               </Button>
               <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 min-h-[56px] text-lg" 
+                size="xl" 
+                variant="outline"
                 asChild
               >
                 <Link href="/#howitworks">Sådan fungerer det</Link>
               </Button>
             </div>
             
-            <p className="text-sm text-muted-foreground font-cormorant mt-6">
+            <p className="text-sm text-muted-foreground font-body mt-6">
               ✨ Første måned gratis • 🔒 100% anonymt • 💰 69 kr./måned
             </p>
           </div>

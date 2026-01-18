@@ -57,10 +57,10 @@ const FAQSection = () => {
           <div className="inline-flex items-center justify-center p-3 mb-6 rounded-full bg-brand-warm/10">
             <HelpCircle className="h-6 w-6 text-brand-warm" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-cormorant font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl text-foreground mb-4">
             Ofte stillede spørgsmål
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-cormorant">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
             Her er svar på nogle af de spørgsmål, vi ofte får fra kvinder, der overvejer at starte med Partnertid.
           </p>
         </div>
@@ -73,10 +73,10 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="border border-border/50 rounded-lg px-4 md:px-6 bg-white shadow-sm hover:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline py-4 md:py-6 font-cormorant text-base md:text-lg min-h-[44px]">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline py-4 md:py-6 font-body text-base md:text-lg min-h-[44px]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-4 md:pb-6 font-cormorant text-sm md:text-base leading-relaxed">
+                <AccordionContent className="text-muted-foreground pb-4 md:pb-6 font-body text-sm md:text-base leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

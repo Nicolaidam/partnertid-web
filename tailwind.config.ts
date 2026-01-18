@@ -19,9 +19,24 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				playfair: ['Playfair Display', 'serif'],
-				cormorant: ['Cormorant Garamond', 'serif'],
+				body: ['var(--font-body)', 'serif'],
+				display: ['var(--font-display)', 'serif'],
+				sans: ['var(--font-body)', 'serif'],
+			},
+			spacing: {
+				72: '18rem',
+				88: '22rem',
+				104: '26rem',
+			},
+			fontSize: {
+				display: ['clamp(2.75rem, 4vw, 3.75rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+				'section-title': ['clamp(2rem, 2.5vw, 2.5rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+				body: ['clamp(0.95rem, 1vw + 0.25rem, 1.1rem)', { lineHeight: '1.75' }],
+				'small-body': ['0.875rem', { lineHeight: '1.6' }],
+			},
+			letterSpacing: {
+				tighter: '-0.05em',
+				widest: '0.35em',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -93,7 +108,9 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				xl: '1.25rem',
+				'2xl': '1.75rem'
 			},
 			keyframes: {
 				'accordion-down': {

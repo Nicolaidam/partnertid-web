@@ -57,10 +57,10 @@ const FeatureSection = () => {
     <section id="features" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-cormorant font-extrabold text-foreground mb-4">
+          <h2 className="mb-4">
             Træn jeres forhold hver uge
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-cormorant">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
             Partnertid skaber rammerne for forebyggende vedligeholdelse af jeres forhold. Ligesom træning eller en vitaminpille – 
             en ugentlig rutine der styrker jeres forbindelse, før problemer opstår.
           </p>
@@ -69,9 +69,9 @@ const FeatureSection = () => {
         <div className="space-y-12">
           {featureCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              <h3 className="text-2xl font-cormorant font-extrabold text-foreground mb-6 text-center">
+              <h4 className="mb-6 text-center">
                 {category.category}
-              </h3>
+              </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {category.features.map((feature, featureIndex) => (
                   <Card
@@ -80,10 +80,10 @@ const FeatureSection = () => {
                   >
                     <CardHeader className="pb-3">
                       <div className="mb-3">{feature.icon}</div>
-                      <CardTitle className="font-cormorant text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="font-body text-xl">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base font-cormorant leading-relaxed">
+                      <CardDescription className="text-base font-body leading-relaxed">
                         {feature.description}
                       </CardDescription>
                     </CardContent>
