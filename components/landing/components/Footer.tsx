@@ -1,5 +1,6 @@
 
 import { Heart } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -19,9 +20,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-playfair font-light mb-4">Links</h4>
             <ul className="space-y-2 font-cormorant text-lg">
-              <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Funktioner</a></li>
-              <li><a href="#howitworks" className="text-gray-400 hover:text-white transition-colors">Sådan virker det</a></li>
-              <li><a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pris</a></li>
+              <li><Link href="/#features" className="text-gray-400 hover:text-white transition-colors">Funktioner</Link></li>
+              <li><Link href="/#howitworks" className="text-gray-400 hover:text-white transition-colors">Sådan virker det</Link></li>
+              <li><Link href="/#pricing" className="text-gray-400 hover:text-white transition-colors">Pris</Link></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Vilkår og betingelser</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privatlivspolitik</a></li>
             </ul>

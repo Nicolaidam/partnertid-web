@@ -228,7 +228,7 @@ const CtaSection = () => (
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Partnertid - Træn jeres forhold hver uge";
+    document.title = "Partnertid – Træn jeres forhold hver uge";
     // Enable smooth scrolling for anchor links
     document.documentElement.style.scrollBehavior = "smooth";
     return () => {

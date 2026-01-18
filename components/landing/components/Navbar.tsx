@@ -21,16 +21,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="#" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <Heart className="h-5 w-5 mr-1 text-brand-warm" strokeWidth={2} />
                 <span className="text-xl font-cormorant font-medium tracking-wider text-primary">Partnertid</span>
-              </a>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#features" className="nav-link">Funktioner</a>
-                <a href="#howitworks" className="nav-link">Sådan virker det</a>
-                <a href="#pricing" className="nav-link">Pris</a>
+                <Link href="/#features" className="nav-link">Funktioner</Link>
+                <Link href="/#howitworks" className="nav-link">Sådan virker det</Link>
+                <Link href="/#pricing" className="nav-link">Pris</Link>
               </div>
             </div>
           </div>
@@ -88,9 +88,9 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          <a href="#features" className="nav-link block font-semibold text-xl">Funktioner</a>
-          <a href="#howitworks" className="nav-link block font-semibold text-xl">Sådan virker det</a>
-          <a href="#pricing" className="nav-link block font-semibold text-xl">Pris</a>
+          <Link href="/#features" className="nav-link block font-semibold text-xl">Funktioner</Link>
+          <Link href="/#howitworks" className="nav-link block font-semibold text-xl">Sådan virker det</Link>
+          <Link href="/#pricing" className="nav-link block font-semibold text-xl">Pris</Link>
           <div className="mt-4 flex flex-col space-y-2 pt-2 border-t">
             <Button variant="outline" className="border-2" asChild>
               <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>

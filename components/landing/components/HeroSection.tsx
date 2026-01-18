@@ -52,7 +52,7 @@ const HeroSection = () => {
                 className="border-2 min-h-[56px] text-lg" 
                 asChild
               >
-                <a href="#howitworks">Sådan fungerer det</a>
+                <Link href="/#howitworks">Sådan fungerer det</Link>
               </Button>
             </div>
             
@@ -65,7 +65,7 @@ const HeroSection = () => {
             <div className="relative z-0 max-w-[70%] mx-auto">
               <div className="relative rounded-[3rem] overflow-hidden aspect-[4/5]">
                 <Image 
-                  src="/images/image_love.png" 
+                  src="/image_love.png"
                   alt="Par i solnedgang ved vandet" 
                   fill
                   className="object-cover object-center"
