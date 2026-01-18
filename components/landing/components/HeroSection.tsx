@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="mb-12">
-            Stærke forhold sker ikke af sig selv. Ligesom alt andet der betyder noget, har kærligheden brug for opmærksomhed. Partnertid giver jer en enkel, ugentlig rutine, der forebygger afstand og styrker jeres forbindelse.
+                De stærkeste par venter ikke på, at krisen rammer.<br/>De taler sammen. De lytter. De tager hinanden alvorligt - også når alt føles godt.<br/><br/>Partnertid er et alternativ til traditionel parterapi, som ofte er både dyrt og grænseoverskridende. I stedet får I et trygt, anonymt og intelligent samtalerum.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
@@ -42,7 +42,7 @@ const HeroSection = () => {
                 asChild
               >
                 <Link href="/auth/sign-up">
-                  Prøv gratis i 30 dage
+                  Få adgang gratis
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

@@ -58,7 +58,7 @@ const PricingSection = () => {
                   asChild
                 >
                   <Link href="/auth/sign-up">
-                    Prøv gratis i 30 dage <ArrowRight className="ml-2 h-5 w-5" />
+                      Få adgang gratis <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
               </div>
