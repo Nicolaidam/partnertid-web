@@ -80,10 +80,10 @@ const Testimonials = () => (
         <div className="inline-flex items-center justify-center p-3 mb-6 rounded-full bg-brand-warm/10">
           <Heart className="h-6 w-6 text-brand-warm" fill="#E9985A" strokeWidth={1.5} />
         </div>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
+        <h2 className="text-3xl md:text-4xl font-normal tracking-[0.04em] text-foreground mb-4">
           Hvad andre kvinder siger om Partnertid
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Fortællinger fra kvinder, der har valgt at investere proaktivt i deres forhold – før problemer opstår.
         </p>
       </div>
@@ -97,13 +97,13 @@ const Testimonials = () => (
             <CardContent className="p-6">
               <div className="flex items-start mb-4">
                 <Quote className="h-5 w-5 text-brand-warm/30 mr-2 flex-shrink-0 mt-1" />
-                <p className="text-foreground italic font-body text-base leading-relaxed flex-1">
+                <p className="text-foreground italic text-base leading-relaxed flex-1">
                   &quot;{testimonial.quote}&quot;
                 </p>
               </div>
               <div className="flex items-center mt-6 pt-4 border-t border-border/30">
                 <Avatar className="h-10 w-10 mr-3">
-                  <AvatarFallback className="bg-brand-warm/20 text-brand-warm font-semibold">
+                  <AvatarFallback className="bg-brand-warm/20 text-brand-warm font-display font-normal tracking-[0.08em]">
                     {testimonial.initials}
                   </AvatarFallback>
                 </Avatar>
@@ -113,7 +113,7 @@ const Testimonials = () => (
                   </p>
                   <p className="text-xs text-muted-foreground">{testimonial.relationship}</p>
                   <div className="mt-1">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-brand-sand/20 text-brand-warm">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-normal font-display tracking-[0.08em] bg-brand-sand/20 text-brand-warm">
                       {testimonial.scenario}
                     </span>
                   </div>
@@ -127,26 +127,26 @@ const Testimonials = () => (
       <div className="max-w-4xl mx-auto">
         <Card className="border border-brand-warm/30 bg-gradient-to-br from-brand-warm/5 to-brand-sand/10">
           <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-extrabold text-foreground mb-4">
+            <h3 className="text-2xl font-normal tracking-[0.04em] text-foreground mb-4">
               Hvorfor kvinder vælger Partnertid
             </h3>
-            <p className="text-muted-foreground font-body text-lg leading-relaxed mb-6">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Mange i et forhold oplever, at de er dem, der ofte tager initiativ til at arbejde på forholdet. 
               Partnertid giver jer begge en struktureret måde at investere i jeres forhold på – sammen. 
               Det handler om at føle sig set, hørt og forstået. Om at have et trygt rum, hvor I kan 
               udforske jeres følelser og behov. Om at bygge en stærkere forbindelse gennem konsistent praksis.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mt-6">
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-medium text-foreground">
+              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
                 Føle sig set og hørt
               </span>
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-medium text-foreground">
+              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
                 Bedre kommunikation
               </span>
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-medium text-foreground">
+              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
                 Mere nærvær
               </span>
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-medium text-foreground">
+              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
                 Mindre konflikter
               </span>
             </div>
@@ -172,12 +172,12 @@ const CtaSection = () => (
               <HeartHandshake className="h-6 w-6 text-brand-warm" fill="#E9985A" strokeWidth={1.5} />
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground leading-tight">
+            <h2 className="text-3xl md:text-5xl font-normal tracking-[0.04em] mb-6 text-foreground leading-tight">
               Start jeres ugentlige <br className="hidden md:block" />
               <span className="text-brand-warm">rutine</span> i dag
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-body">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Ligesom du tager en vitaminpille hver dag, kan I hver uge kigge hinanden i øjnene og være der for hinanden. 
               Alle parforhold med intention om at blive sammen bør arbejde på det – start mens I har det godt sammen.
             </p>
@@ -185,17 +185,17 @@ const CtaSection = () => (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
               <div className="flex flex-col items-center p-4 rounded-lg bg-brand-sand/5">
                 <div className="text-2xl mb-2">✨</div>
-                <p className="text-sm font-medium text-foreground font-body">Første måned gratis</p>
+                <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground">Første måned gratis</p>
                 <p className="text-xs text-muted-foreground mt-1">Ingen binding</p>
               </div>
               <div className="flex flex-col items-center p-4 rounded-lg bg-brand-sand/5">
                 <div className="text-2xl mb-2">🔒</div>
-                <p className="text-sm font-medium text-foreground font-body">100% anonymt</p>
+                <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground">100% anonymt</p>
                 <p className="text-xs text-muted-foreground mt-1">Alt mellem jer to</p>
               </div>
               <div className="flex flex-col items-center p-4 rounded-lg bg-brand-sand/5">
                 <div className="text-2xl mb-2">⏱️</div>
-                <p className="text-sm font-medium text-foreground font-body">30-45 min/uge</p>
+                <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground">30-45 min/uge</p>
                 <p className="text-xs text-muted-foreground mt-1">I jeres tempo</p>
               </div>
             </div>
@@ -211,10 +211,10 @@ const CtaSection = () => (
                 </Link>
               </Button>
               <div className="flex flex-col items-center gap-2">
-                <p className="text-sm text-muted-foreground font-body">
+                <p className="text-sm text-muted-foreground">
                   Ingen kreditkort påkrævet i prøveperioden
                 </p>
-                <p className="text-xs text-muted-foreground font-body">
+                <p className="text-xs text-muted-foreground">
                   Opsig når som helst – ingen binding
                 </p>
               </div>

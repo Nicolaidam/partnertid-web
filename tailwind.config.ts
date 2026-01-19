@@ -20,8 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				body: ['var(--font-body)', 'serif'],
-				display: ['var(--font-display)', 'serif'],
-				sans: ['var(--font-body)', 'serif'],
+				display: ['var(--font-display)', 'sans-serif'],
+				sans: ['var(--font-display)', 'sans-serif'],
 			},
 			spacing: {
 				72: '18rem',
@@ -29,8 +29,8 @@ export default {
 				104: '26rem',
 			},
 			fontSize: {
-				display: ['clamp(2.75rem, 4vw, 3.75rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-				'section-title': ['clamp(2rem, 2.5vw, 2.5rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+				display: ['clamp(2.75rem, 4vw, 3.75rem)', { lineHeight: '1.1', letterSpacing: '0.02em' }],
+				'section-title': ['clamp(2rem, 2.5vw, 2.5rem)', { lineHeight: '1.2', letterSpacing: '0.015em' }],
 				body: ['clamp(0.95rem, 1vw + 0.25rem, 1.1rem)', { lineHeight: '1.75' }],
 				'small-body': ['0.875rem', { lineHeight: '1.6' }],
 			},

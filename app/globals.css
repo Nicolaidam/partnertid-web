@@ -74,8 +74,12 @@
     }
 
     body {
-        @apply bg-background text-foreground font-body font-medium text-body leading-relaxed;
+        @apply bg-background text-foreground font-body font-normal text-body leading-relaxed;
         font-feature-settings: "liga", "kern";
+    }
+
+    button {
+        @apply font-display;
     }
 
     a {
@@ -83,31 +87,31 @@
     }
 
     h1 {
-        @apply font-display text-4xl md:text-5xl lg:text-5xl font-normal tracking-tight leading-tight;
+        @apply font-display text-5xl font-medium text-foreground tracking-[0.03em];
     }
 
     h2 {
-        @apply font-display text-3xl md:text-4xl font-normal tracking-tight leading-snug;
+        @apply font-display text-section-title font-normal tracking-[0.03em] leading-snug;
     }
 
     h3 {
-        @apply font-display text-2xl md:text-3xl font-normal leading-snug;
+        @apply font-display text-2xl md:text-3xl font-normal tracking-[0.02em] leading-snug;
     }
 
     h4 {
-        @apply font-display text-xl font-semibold leading-snug tracking-wide;
+        @apply font-display text-xl font-normal leading-snug tracking-[0.04em];
     }
 
     h5 {
-        @apply font-display text-lg font-semibold uppercase tracking-wider;
+        @apply font-display text-lg font-normal uppercase tracking-[0.2em];
     }
 
     h6 {
-        @apply font-display text-base font-semibold uppercase tracking-[0.3em];
+        @apply font-display text-base font-normal uppercase tracking-[0.28em];
     }
 
     p {
-        @apply font-body text-lg;
+        @apply font-light text-sm text-foreground/60;
     }
 }
 
@@ -115,7 +119,7 @@
 @layer components {
     /* Navigation */
     .nav-link {
-        @apply text-foreground/80 hover:text-foreground transition-colors px-3 py-2 rounded-md text-lg font-body tracking-wide;
+        @apply text-foreground/60 hover:text-foreground transition-colors px-3 py-2 rounded-md font-normal font-display tracking-[0.08em];
     }
 
     /* Effects and utilities */

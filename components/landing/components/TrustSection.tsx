@@ -36,10 +36,10 @@ const TrustSection = () => {
           <div className="inline-flex items-center justify-center p-3 mb-6 rounded-full bg-brand-green/10">
             <Shield className="h-6 w-6 text-brand-green" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-normal tracking-[0.04em] text-foreground mb-4">
             Trygt og sikkert
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Jeres forhold er jeres private rum. Vi skaber rammerne – I bestemmer indholdet.
           </p>
         </div>
@@ -56,10 +56,10 @@ const TrustSection = () => {
                     {point.icon}
                   </div>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">
+                <h3 className="font-normal tracking-[0.04em] text-foreground mb-2 text-lg">
                   {point.title}
                 </h3>
-                <p className="text-muted-foreground text-sm font-body leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {point.description}
                 </p>
               </CardContent>
@@ -75,10 +75,10 @@ const TrustSection = () => {
                   <CheckCircle2 className="h-6 w-6 text-brand-green" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-3 text-lg">
+                  <h3 className="font-normal tracking-[0.04em] text-foreground mb-3 text-lg">
                     Sådan fungerer anonymiteten
                   </h3>
-                  <p className="text-muted-foreground font-body leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     Når I bruger Partnertid, er alt krypteret og sikkert opbevaret. Vi kan ikke se jeres refleksioner, 
                     jeres svar eller jeres samtaler. Systemet fungerer som et trygt rum, hvor I kan udforske jeres 
                     forhold sammen – uden at nogen udefra kan se ind. Jeres data deles aldrig med tredjeparter, 
@@ -95,4 +95,3 @@ const TrustSection = () => {
 };
 
 export default TrustSection;
-

@@ -60,7 +60,7 @@ const FAQSection = () => {
           <h2 className="text-3xl md:text-4xl text-foreground mb-4">
             Ofte stillede spørgsmål
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Her er svar på nogle af de spørgsmål, vi ofte får fra kvinder, der overvejer at starte med Partnertid.
           </p>
         </div>
@@ -73,10 +73,10 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="border border-border/50 rounded-lg px-4 md:px-6 bg-white shadow-sm hover:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline py-4 md:py-6 font-body text-base md:text-lg min-h-[44px]">
+                <AccordionTrigger className="text-left font-normal text-foreground hover:no-underline py-4 md:py-6 text-base md:text-lg min-h-[44px]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-4 md:pb-6 font-body text-sm md:text-base leading-relaxed">
+                <AccordionContent className="text-muted-foreground pb-4 md:pb-6 text-sm md:text-base leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -89,4 +89,3 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
-

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Playfair_Display } from "next/font/google";
+import {Cormorant_Garamond, Raleway} from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
@@ -58,18 +58,18 @@ export const metadata: Metadata = {
   },
 };
 
-const displayFont = Playfair_Display({
-  variable: "--font-display",
-  display: "swap",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const bodyFont = Cormorant_Garamond({
+const bodyFont = Raleway({
   variable: "--font-body",
   display: "swap",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["100","200","300","400","500","600","700","800"],
+});
+
+const displayFont = Cormorant_Garamond({
+  variable: "--font-display",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["300","400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 

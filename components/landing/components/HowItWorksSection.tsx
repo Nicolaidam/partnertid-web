@@ -45,7 +45,7 @@ const HowItWorksSection = () => {
           <h1>
             Jeres ugentlige <span className="text-brand-warm">rutine</span>
           </h1>
-          <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto font-body">
+          <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
             Ligesom du tager en vitaminpille hver dag, er Partnertid jeres ugentlige check-in. 
             En fast rutine der styrker jeres forhold gennem konsistent praksis.
           </p>
@@ -66,13 +66,13 @@ const HowItWorksSection = () => {
                   <div className="flex items-start p-6">
                     <div className="flex-shrink-0 mr-6">
                       <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-warm/10 group-hover:bg-brand-warm/20 transition-colors">
-                        <span className="text-brand-warm font-semibold">{index + 1}</span>
+                        <span className="text-brand-warm font-display font-normal tracking-[0.08em]">{index + 1}</span>
                       </div>
                     </div>
                     <div>
                       <div className="flex items-center mb-2">
                         <span className="mr-3">{step.icon}</span>
-                        <h3 className="text-lg font-semibold text-foreground">
+                        <h3 className="text-lg font-normal tracking-[0.04em] text-foreground">
                           {step.title}
                         </h3>
                       </div>
@@ -89,13 +89,13 @@ const HowItWorksSection = () => {
           <div className="col-span-1 animate-scale-in" style={{ animationDelay: "0.5s" }}>
             <Card className="h-full bg-gradient-to-br from-white to-brand-sand/10 border border-brand-sand/30 shadow-md overflow-hidden">
               <CardHeader className="pb-2">
-                <CardTitle className="text-xl font-body font-extrabold">Eksempel på ugentlig check-in</CardTitle>
+                <CardTitle className="text-xl font-normal tracking-[0.04em]">Eksempel på ugentlig check-in</CardTitle>
                 <CardDescription>Se hvordan jeres ugentlige rutine kan se ud</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <Card className="border border-brand-sand/50 shadow-sm bg-white/80 animate-fade-in" style={{ animationDelay: "0.7s" }}>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium text-brand-warm flex items-center">
+                    <CardTitle className="text-sm font-normal tracking-[0.12em] text-brand-warm flex items-center">
                       <MessageCircle className="h-4 w-4 mr-2" />
                       Samtalepunkter
                     </CardTitle>
@@ -103,7 +103,7 @@ const HowItWorksSection = () => {
                   <CardContent className="pt-0">
                     <ul className="space-y-3">
                       <li className="bg-muted/30 p-3 rounded-lg text-sm border border-muted/50">
-                        <p className="font-body italic text-foreground">
+                        <p className="italic text-foreground">
                           &quot;I har begge udtrykt et ønske om mere nærvær i hverdagen. Hvordan ser meningsfuld tid sammen ud for hver af jer?&quot;
                         </p>
                       </li>
@@ -113,7 +113,7 @@ const HowItWorksSection = () => {
 
                 <Card className="border border-brand-sand/50 shadow-sm bg-white/80 animate-fade-in" style={{ animationDelay: "0.9s" }}>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium text-brand-green flex items-center">
+                    <CardTitle className="text-sm font-normal tracking-[0.12em] text-brand-green flex items-center">
                       <Users className="h-4 w-4 mr-2" />
                       Fælles udforskning
                     </CardTitle>
@@ -130,7 +130,7 @@ const HowItWorksSection = () => {
 
                 <Card className="border border-brand-sand/50 shadow-sm bg-white/80 animate-fade-in" style={{ animationDelay: "1.1s" }}>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium text-brand-terracotta flex items-center">
+                    <CardTitle className="text-sm font-normal tracking-[0.12em] text-brand-terracotta flex items-center">
                       <Sparkles className="h-4 w-4 mr-2" />
                       Fælles refleksion
                     </CardTitle>

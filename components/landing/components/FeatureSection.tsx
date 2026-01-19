@@ -60,7 +60,7 @@ const FeatureSection = () => {
           <h2 className="mb-4">
             Træn jeres forhold hver uge
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Partnertid skaber rammerne for forebyggende vedligeholdelse af jeres forhold. Ligesom træning eller en vitaminpille – 
             en ugentlig rutine der styrker jeres forbindelse, før problemer opstår.
           </p>
@@ -80,10 +80,10 @@ const FeatureSection = () => {
                   >
                     <CardHeader className="pb-3">
                       <div className="mb-3">{feature.icon}</div>
-                      <CardTitle className="font-body text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base font-body leading-relaxed">
+                      <CardDescription className="text-base leading-relaxed">
                         {feature.description}
                       </CardDescription>
                     </CardContent>
