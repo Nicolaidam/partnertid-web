@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="mb-12">
-                De stærkeste par venter ikke på, at krisen rammer.<br/>De taler sammen. De lytter. De tager hinanden alvorligt - også når alt føles godt.<br/><br/>Partnertid er et alternativ til traditionel parterapi, som ofte er både dyrt og grænseoverskridende. I stedet får I et trygt, anonymt og intelligent samtalerum.
+                Parforhold handler ikke kun om lyst, men også om vilje og arbejde.<br/><br/>De stærkeste par venter ikke på, at krisen rammer.<br/>De taler sammen. De lytter. De tager hinanden alvorligt - også når alt føles godt.<br/><br/>Partnertid er et alternativ til traditionel parterapi, som ofte er både dyrt og grænseoverskridende. I stedet får I et trygt, anonymt og intelligent samtalerum.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
