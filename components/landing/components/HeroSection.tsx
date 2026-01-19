@@ -5,18 +5,18 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden">
+    <div className="relative flex min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-warm/15 via-brand-sand/20 to-brand-terracotta/10"></div>
-      <div className="container mx-auto px-4 pt-20 md:pt-32 pb-20 md:pb-32 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-16 md:gap-20 items-center">
-          <div className="text-center md:text-left space-y-8">
-              <h1 className="mb-8 flex flex-col gap-2 md:gap-3 text-foreground">
+      <div className="container relative z-10 mx-auto px-4 py-20 md:py-32">
+          <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-hero md:gap-20">
+          <div className="space-y-8 text-center md:text-left">
+              <h1 className="mb-2 flex flex-col gap-2 text-foreground md:gap-3">
                   <span>Den største gave,</span>
                   <span>du kan give din partner er</span>
               </h1>
-            <h3 className="-mt-2 md:-mt-3 flex flex-col gap-2 md:gap-3 text-4xl uppercase tracking-[0.4em] font-medium">
+            <h5 className="-mt-0.5 flex flex-col gap-2 text-display font-medium uppercase tracking-ultra md:-mt-1 md:gap-3">
               <span className="text-brand-warm">at forstå dem</span>
-            </h3>
+            </h5>
             <div className="mb-12 space-y-6 text-foreground/80">
               <p>
                 Parforhold handler ikke kun om lyst, men også om læringer, vilje
@@ -32,14 +32,14 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
+            <div className="mb-10 flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
               <Button
                 size="xl"
                 asChild
               >
                 <Link href="/partnertesten">
                     Prøv partnertesten helt gratis
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 size-5" />
                 </Link>
               </Button>
               <Button
@@ -51,14 +51,14 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <p className="text-sm text-muted-foreground mt-6">
+            <p className="mt-6 text-body-sm text-muted-foreground">
               ✨ Kommer snart • 🔒 100% anonymt • 🇪🇺 Servere i EU
             </p>
           </div>
 
-          <div className="hidden md:block relative z-10">
-            <div className="relative z-0 max-w-[70%] mx-auto">
-              <div className="relative rounded-[3rem] overflow-hidden aspect-[4/5]">
+          <div className="relative z-10 hidden md:block">
+            <div className="relative z-0 mx-auto max-w-70p">
+              <div className="relative aspect-4/5 overflow-hidden rounded-5xl">
                 <Image
                   src="/image_love.png"
                   alt="Par i solnedgang ved vandet"

@@ -51,32 +51,32 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 bg-gradient-to-b from-white via-gray-50/50 to-white">
+    <section id="faq" className="bg-gradient-to-b from-background via-muted/50 to-background py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center p-3 mb-6 rounded-full bg-brand-warm/10">
-            <HelpCircle className="h-6 w-6 text-brand-warm" />
+        <div className="mb-16 text-center">
+          <div className="mb-6 inline-flex items-center justify-center rounded-full bg-brand-warm/10 p-3">
+            <HelpCircle className="size-6 text-brand-warm" />
           </div>
-          <h2 className="text-3xl md:text-4xl text-foreground mb-4">
+          <h2 className="mb-4 text-section-title text-foreground md:text-display">
             Ofte stillede spørgsmål
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lead text-muted-foreground">
             Her er svar på nogle af de spørgsmål, vi ofte får fra kvinder, der overvejer at starte med Partnertid.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-border/50 rounded-lg px-4 md:px-6 bg-white shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-lg border border-border/50 bg-card px-4 shadow-sm transition-shadow hover:shadow-md md:px-6"
               >
-                <AccordionTrigger className="text-left font-normal text-foreground hover:no-underline py-4 md:py-6 text-base md:text-lg min-h-[44px]">
+                <AccordionTrigger className="min-h-11 py-4 text-left text-body font-normal text-foreground hover:no-underline md:py-6 md:text-lead">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-4 md:pb-6 text-sm md:text-base leading-relaxed">
+                <AccordionContent className="pb-4 text-body-sm leading-relaxed text-muted-foreground md:pb-6 md:text-body">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

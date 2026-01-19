@@ -5,68 +5,68 @@ import Link from "next/link";
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="pricing" className="bg-gradient-to-b from-background to-muted py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-normal tracking-[0.04em] text-foreground">
+        <div className="mb-16 text-center">
+          <h2 className="text-section-title font-normal tracking-emphasis text-foreground md:text-display">
             En investering i jeres forholds sundhed
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mx-auto mt-4 max-w-2xl text-lead text-muted-foreground">
             Alle parforhold med intention om at blive sammen bør arbejde på det. Ligesom du investerer i din egen sundhed, 
             er Partnertid en investering i jeres forholds velvære – en ugentlig rutine der forebygger problemer og styrker jeres forbindelse.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <Card className="overflow-hidden border-0 shadow-xl rounded-3xl">
-            <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+        <div className="mx-auto max-w-5xl">
+          <Card className="overflow-hidden rounded-3xl border-0 shadow-xl">
+            <div className="grid divide-y divide-border md:grid-cols-3 md:divide-x md:divide-y-0">
               {/* Left Column - Plan Info */}
-              <div className="p-8 md:p-10 bg-gradient-to-br from-brand-warm/10 to-brand-sand/20">
-                <div className="flex items-center mb-6">
-                  <div className="bg-brand-warm/20 p-3 rounded-full mr-4">
-                    <Heart className="h-7 w-7 text-brand-warm" strokeWidth={1.5} fill="#E9985A" />
+              <div className="bg-gradient-to-br from-brand-warm/10 to-brand-sand/20 p-8 md:p-10">
+                <div className="mb-6 flex items-center">
+                  <div className="mr-4 rounded-full bg-brand-warm/20 p-3">
+                    <Heart className="size-7 text-brand-warm" strokeWidth={1.5} fill="currentColor" />
                   </div>
-                  <h3 className="text-2xl font-normal tracking-[0.04em]">Partnertid</h3>
+                  <h3 className="text-title font-normal tracking-emphasis">Partnertid</h3>
                 </div>
                 
                 <div className="mb-8">
-                  <div className="flex items-baseline mb-2">
-                    <span className="text-4xl">69 kr</span>
-                    <span className="text-lg text-muted-foreground ml-2">/måned</span>
+                  <div className="mb-2 flex items-baseline">
+                    <span className="text-display">69 kr</span>
+                    <span className="ml-2 text-lead text-muted-foreground">/måned</span>
                   </div>
-                  <p className="text-brand-warm font-medium">
+                  <p className="font-medium text-brand-warm">
                     Månedlig betaling, ingen binding
                   </p>
                 </div>
                 
-                <div className="text-lg mb-8">
+                <div className="mb-8 text-lead">
                   <p>
                     Ligesom en vitaminpille hver dag holder dig sund, holder Partnertid jeres forhold stærkt. 
                     En ugentlig rutine der passer ind i jeres liv – for alle par der vil hinanden.
                   </p>
                 </div>
                 
-                <div className="space-y-3 mb-8">
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-warm/10 text-brand-warm">
-                    <span className="text-sm font-normal font-display tracking-[0.08em]">📅 Første måned gratis</span>
+                <div className="mb-8 space-y-3">
+                  <div className="inline-flex items-center rounded-full bg-brand-warm/10 px-4 py-2 text-brand-warm">
+                    <span className="font-display text-body-sm font-normal tracking-button">📅 Første måned gratis</span>
                   </div>
                 </div>
                 
                 <Button
                   size="xl"
-                  className="w-full hover:bg-brand-warm-dark rounded-xl"
+                  className="w-full rounded-xl hover:bg-brand-warm-dark"
                   asChild
                 >
                   <Link href="/auth/sign-up">
-                      Prøv en gratis parforholdstest<ArrowRight className="ml-2 h-5 w-5" />
+                      Prøv en gratis parforholdstest<ArrowRight className="ml-2 size-5" />
                   </Link>
                 </Button>
               </div>
               
               {/* Middle Column - Features */}
-              <div className="p-8 md:p-10 bg-white md:col-span-2">
-                <h4 className="font-normal tracking-[0.08em] text-lg mb-6">Det får I:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-card p-8 md:col-span-2 md:p-10">
+                <h4 className="mb-6 text-lead font-normal tracking-button">Det får I:</h4>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   {[
                     {
                       title: "Ugentlig træning",
@@ -94,22 +94,22 @@ const PricingSection = () => {
                     }
                   ].map((feature, index) => (
                     <div key={index} className="flex">
-                      <div className="flex-shrink-0 mr-3">
-                        <div className="h-6 w-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                          <Check className="h-4 w-4 text-brand-green" />
+                      <div className="mr-3 shrink-0">
+                        <div className="flex size-6 items-center justify-center rounded-full bg-brand-green/20">
+                          <Check className="size-4 text-brand-green" />
                         </div>
                       </div>
                       <div>
-                        <h5 className="font-normal tracking-[0.08em] text-foreground">{feature.title}</h5>
+                        <h5 className="font-normal tracking-button text-foreground">{feature.title}</h5>
                         <p className="text-muted-foreground">{feature.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-gray-100 text-center">
-                  <div className="inline-flex items-center justify-center bg-gray-50 px-4 py-2 rounded-full text-sm text-muted-foreground">
-                    <Heart className="h-4 w-4 mr-2 text-brand-terracotta" fill="#D97F54" strokeWidth={1.5} />
+                <div className="mt-8 border-t border-border pt-6 text-center">
+                  <div className="inline-flex items-center justify-center rounded-full bg-muted px-4 py-2 text-body-sm text-muted-foreground">
+                    <Heart className="mr-2 size-4 text-brand-terracotta" fill="currentColor" strokeWidth={1.5} />
                     <span>Ingen kreditkort påkrævet i prøveperioden</span>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ const PricingSection = () => {
             </div>
           </Card>
           
-          <div className="mt-12 text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100/50 max-w-2xl mx-auto">
-            <p className="text-muted-foreground text-lg italic">
+          <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-border/50 bg-card p-8 text-center shadow-sm">
+            <p className="text-lead italic text-muted-foreground">
               &quot;Et parforhold er en muskel der skal trænes. Ligesom du tager en vitaminpille hver dag, 
               bør I hver uge kigge hinanden i øjnene og være der for hinanden. Det er ikke terapi – det er vedligeholdelse.&quot;
             </p>

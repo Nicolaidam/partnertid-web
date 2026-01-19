@@ -74,46 +74,46 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+  <section className="bg-gradient-to-b from-muted to-background py-24">
     <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center justify-center p-3 mb-6 rounded-full bg-brand-warm/10">
-          <Heart className="h-6 w-6 text-brand-warm" fill="#E9985A" strokeWidth={1.5} />
+      <div className="mb-16 text-center">
+        <div className="mb-6 inline-flex items-center justify-center rounded-full bg-brand-warm/10 p-3">
+          <Heart className="size-6 text-brand-warm" fill="currentColor" strokeWidth={1.5} />
         </div>
-        <h2 className="text-3xl md:text-4xl font-normal tracking-[0.04em] text-foreground mb-4">
+        <h2 className="mb-4 text-section-title font-normal tracking-emphasis text-foreground md:text-display">
           Hvad andre kvinder siger om Partnertid
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="mx-auto max-w-2xl text-lead text-muted-foreground">
           Fortællinger fra kvinder, der har valgt at investere proaktivt i deres forhold – før problemer opstår.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <Card
             key={index}
-            className="border border-border/50 hover:shadow-lg transition-all duration-300 bg-white"
+            className="border border-border/50 bg-card transition-all duration-300 hover:shadow-lg"
           >
             <CardContent className="p-6">
-              <div className="flex items-start mb-4">
-                <Quote className="h-5 w-5 text-brand-warm/30 mr-2 flex-shrink-0 mt-1" />
-                <p className="text-foreground italic text-base leading-relaxed flex-1">
+              <div className="mb-4 flex items-start">
+                <Quote className="mr-2 mt-1 size-5 shrink-0 text-brand-warm/30" />
+                <p className="flex-1 text-body italic leading-relaxed text-foreground">
                   &quot;{testimonial.quote}&quot;
                 </p>
               </div>
-              <div className="flex items-center mt-6 pt-4 border-t border-border/30">
-                <Avatar className="h-10 w-10 mr-3">
-                  <AvatarFallback className="bg-brand-warm/20 text-brand-warm font-display font-normal tracking-[0.08em]">
+              <div className="mt-6 flex items-center border-t border-border/30 pt-4">
+                <Avatar className="mr-3 size-10">
+                  <AvatarFallback className="bg-brand-warm/20 font-display font-normal tracking-button text-brand-warm">
                     {testimonial.initials}
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                  <p className="text-sm font-semibold text-foreground">
+                  <p className="text-body-sm font-semibold text-foreground">
                     {testimonial.name}, {testimonial.age}
                   </p>
-                  <p className="text-xs text-muted-foreground">{testimonial.relationship}</p>
+                  <p className="text-caption text-muted-foreground">{testimonial.relationship}</p>
                   <div className="mt-1">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-normal font-display tracking-[0.08em] bg-brand-sand/20 text-brand-warm">
+                    <span className="inline-flex items-center rounded-full bg-brand-sand/20 px-2 py-0.5 font-display text-caption font-normal tracking-button text-brand-warm">
                       {testimonial.scenario}
                     </span>
                   </div>
@@ -124,29 +124,29 @@ const Testimonials = () => (
         ))}
       </div>
 
-      <div className="max-w-4xl mx-auto">
+      <div className="mx-auto max-w-4xl">
         <Card className="border border-brand-warm/30 bg-gradient-to-br from-brand-warm/5 to-brand-sand/10">
           <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-normal tracking-[0.04em] text-foreground mb-4">
+            <h3 className="mb-4 text-title font-normal tracking-emphasis text-foreground">
               Hvorfor kvinder vælger Partnertid
             </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="mb-6 text-lead leading-relaxed text-muted-foreground">
               Mange i et forhold oplever, at de er dem, der ofte tager initiativ til at arbejde på forholdet. 
               Partnertid giver jer begge en struktureret måde at investere i jeres forhold på – sammen. 
               Det handler om at føle sig set, hørt og forstået. Om at have et trygt rum, hvor I kan 
               udforske jeres følelser og behov. Om at bygge en stærkere forbindelse gennem konsistent praksis.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 mt-6">
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <span className="rounded-full bg-card/60 px-4 py-2 font-display text-body-sm font-normal tracking-button text-foreground">
                 Føle sig set og hørt
               </span>
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
+              <span className="rounded-full bg-card/60 px-4 py-2 font-display text-body-sm font-normal tracking-button text-foreground">
                 Bedre kommunikation
               </span>
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
+              <span className="rounded-full bg-card/60 px-4 py-2 font-display text-body-sm font-normal tracking-button text-foreground">
                 Mere nærvær
               </span>
-              <span className="px-4 py-2 rounded-full bg-white/60 text-sm font-normal font-display tracking-[0.08em] text-foreground">
+              <span className="rounded-full bg-card/60 px-4 py-2 font-display text-body-sm font-normal tracking-button text-foreground">
                 Mindre konflikter
               </span>
             </div>
@@ -158,63 +158,63 @@ const Testimonials = () => (
 );
 
 const CtaSection = () => (
-  <section className="py-24 bg-gradient-to-br from-primary/5 to-brand-sand/10">
+  <section className="bg-gradient-to-br from-primary/5 to-brand-sand/10 py-24">
     <div className="container mx-auto px-4">
-      <div className="max-w-5xl mx-auto relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-sand/40 to-brand-warm/30 rounded-3xl blur-3xl opacity-70 transform -rotate-1"></div>
+      <div className="relative mx-auto max-w-5xl">
+        <div className="absolute inset-0 -rotate-1 rounded-3xl bg-gradient-to-r from-brand-sand/40 to-brand-warm/30 opacity-70 blur-3xl"></div>
         
-        <div className="relative bg-white shadow-xl rounded-3xl p-8 md:p-16 border border-white/50 backdrop-blur-sm overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-brand-warm/20 to-transparent rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-brand-terracotta/20 to-transparent rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
+        <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-card p-8 shadow-xl backdrop-blur-sm md:p-16">
+          <div className="absolute right-0 top-0 size-64 -translate-y-1/3 translate-x-1/3 rounded-full bg-gradient-to-bl from-brand-warm/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 size-64 -translate-x-1/3 translate-y-1/3 rounded-full bg-gradient-to-tr from-brand-terracotta/20 to-transparent"></div>
           
           <div className="relative text-center">
-            <div className="inline-flex items-center justify-center p-3 mb-8 rounded-full bg-brand-warm/10">
-              <HeartHandshake className="h-6 w-6 text-brand-warm" fill="#E9985A" strokeWidth={1.5} />
+            <div className="mb-8 inline-flex items-center justify-center rounded-full bg-brand-warm/10 p-3">
+              <HeartHandshake className="size-6 text-brand-warm" fill="currentColor" strokeWidth={1.5} />
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-normal tracking-[0.04em] mb-6 text-foreground leading-tight">
+            <h2 className="mb-6 text-section-title font-normal leading-tight tracking-emphasis text-foreground md:text-display">
               Start jeres ugentlige <br className="hidden md:block" />
               <span className="text-brand-warm">rutine</span> i dag
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="mx-auto mb-8 max-w-2xl text-subtitle text-muted-foreground">
               Ligesom du tager en vitaminpille hver dag, kan I hver uge kigge hinanden i øjnene og være der for hinanden. 
               Alle parforhold med intention om at blive sammen bør arbejde på det – start mens I har det godt sammen.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
-              <div className="flex flex-col items-center p-4 rounded-lg bg-brand-sand/5">
-                <div className="text-2xl mb-2">✨</div>
-                <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground">Første måned gratis</p>
-                <p className="text-xs text-muted-foreground mt-1">Ingen binding</p>
+            <div className="mx-auto mb-10 grid max-w-3xl grid-cols-1 gap-4 md:grid-cols-3">
+              <div className="flex flex-col items-center rounded-lg bg-brand-sand/5 p-4">
+                <div className="mb-2 text-title">✨</div>
+                <p className="font-display text-body-sm font-normal tracking-button text-foreground">Første måned gratis</p>
+                <p className="mt-1 text-caption text-muted-foreground">Ingen binding</p>
               </div>
-              <div className="flex flex-col items-center p-4 rounded-lg bg-brand-sand/5">
-                <div className="text-2xl mb-2">🔒</div>
-                <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground">100% anonymt</p>
-                <p className="text-xs text-muted-foreground mt-1">Alt mellem jer to</p>
+              <div className="flex flex-col items-center rounded-lg bg-brand-sand/5 p-4">
+                <div className="mb-2 text-title">🔒</div>
+                <p className="font-display text-body-sm font-normal tracking-button text-foreground">100% anonymt</p>
+                <p className="mt-1 text-caption text-muted-foreground">Alt mellem jer to</p>
               </div>
-              <div className="flex flex-col items-center p-4 rounded-lg bg-brand-sand/5">
-                <div className="text-2xl mb-2">⏱️</div>
-                <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground">30-45 min/uge</p>
-                <p className="text-xs text-muted-foreground mt-1">I jeres tempo</p>
+              <div className="flex flex-col items-center rounded-lg bg-brand-sand/5 p-4">
+                <div className="mb-2 text-title">⏱️</div>
+                <p className="font-display text-body-sm font-normal tracking-button text-foreground">30-45 min/uge</p>
+                <p className="mt-1 text-caption text-muted-foreground">I jeres tempo</p>
               </div>
             </div>
             
             <div className="flex flex-col items-center gap-4">
               <Button
                 size="lg" 
-                className="py-6 px-10 text-lg min-h-[56px]"
+                className="min-h-14 px-10 py-6 text-lead"
                 asChild
               >
                 <Link href="/auth/sign-up">
-                  Start jeres rejse sammen – første måned gratis <ArrowRight className="ml-2 h-5 w-5" />
+                  Start jeres rejse sammen – første måned gratis <ArrowRight className="ml-2 size-5" />
                 </Link>
               </Button>
               <div className="flex flex-col items-center gap-2">
-                <p className="text-sm text-muted-foreground">
+                <p className="text-body-sm text-muted-foreground">
                   Ingen kreditkort påkrævet i prøveperioden
                 </p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-caption text-muted-foreground">
                   Opsig når som helst – ingen binding
                 </p>
               </div>

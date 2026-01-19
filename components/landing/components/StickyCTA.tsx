@@ -32,25 +32,25 @@ const StickyCTA = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border shadow-lg md:hidden animate-in slide-in-from-bottom duration-300">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card shadow-lg duration-300 animate-in slide-in-from-bottom md:hidden">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-3">
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-normal font-display tracking-[0.08em] text-foreground truncate">
+          <div className="min-w-0 flex-1">
+            <p className="truncate font-display text-body-sm font-normal tracking-button text-foreground">
               Start jeres rejse sammen
             </p>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-caption text-muted-foreground">
               Første måned gratis
             </p>
           </div>
           <Button
             size="sm"
-            className="flex-shrink-0"
+            className="shrink-0"
             asChild
           >
             <Link href="/auth/sign-up">
               Prøv nu
-              <ArrowRight className="ml-1 h-4 w-4" />
+              <ArrowRight className="ml-1 size-4" />
             </Link>
           </Button>
         </div>

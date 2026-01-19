@@ -16,23 +16,23 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white/80 backdrop-blur-sm shadow-sm fixed w-full z-50">
+    <nav className="fixed z-50 w-full bg-background/80 shadow-sm backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Link href="/" className="flex items-center">
-                <Heart className="h-5 w-5 mr-1 text-brand-warm" strokeWidth={1.5} />
-                <p className="text-xs uppercase tracking-[0.35em] text-foreground/60 font-normal">
+                <Heart className="mr-1 size-5 text-brand-warm" strokeWidth={1.5} />
+                <p className="text-body-sm font-normal uppercase tracking-wide text-foreground/60">
                   Partnertid
                 </p>
               </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/#features" className="nav-link">Funktioner</Link>
-                <Link href="/#howitworks" className="nav-link">Sådan virker det</Link>
-                <Link href="/#pricing" className="nav-link">Pris</Link>
+                <Link href="/#features" className="nav-link text-lead">Funktioner</Link>
+                <Link href="/#howitworks" className="nav-link text-lead">Sådan virker det</Link>
+                <Link href="/#pricing" className="nav-link text-lead">Pris</Link>
               </div>
             </div>
           </div>
@@ -49,11 +49,11 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
+                className={`${isMenuOpen ? 'hidden' : 'block'} size-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ const Navbar = () => {
                 />
               </svg>
               <svg
-                className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                className={`${isMenuOpen ? 'block' : 'hidden'} size-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -89,11 +89,11 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          <Link href="/#features" className="nav-link block text-xl">Funktioner</Link>
-          <Link href="/#howitworks" className="nav-link block text-xl">Sådan virker det</Link>
-          <Link href="/#pricing" className="nav-link block text-xl">Pris</Link>
-          <div className="mt-4 flex flex-col space-y-2 pt-2 border-t">
+        <div className="space-y-1 bg-card px-2 pb-3 pt-2 shadow-lg sm:px-3">
+          <Link href="/#features" className="nav-link block text-subtitle">Funktioner</Link>
+          <Link href="/#howitworks" className="nav-link block text-subtitle">Sådan virker det</Link>
+          <Link href="/#pricing" className="nav-link block text-subtitle">Pris</Link>
+          <div className="mt-4 flex flex-col space-y-2 border-t pt-2">
             <Button variant="outline" className="border-2" asChild>
               <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>
                 Log ind

@@ -12,12 +12,14 @@
 - `npm run build` — create a production build.
 - `npm run start` — run the built app.
 - `npm run lint` — run ESLint using `eslint.config.mjs`.
-
+- `npm run lint -- --fix` - attempt fixing linting warnings and errors
+- 
 ## Coding Style & Naming Conventions
 - TypeScript + React; 2-space indentation; semicolons; prefer named exports.
 - File names use kebab-case in `components/` (e.g., `auth-button.tsx`); route files follow Next.js conventions (`page.tsx`, `layout.tsx`, `route.ts`).
-- Tailwind is the primary styling layer; keep class lists readable and reuse helpers from `lib/utils.ts`.
+- Tailwind is the primary styling layer, follow design guidelines from `design-guidelines.md`
 - Use the `@/` alias for project-root imports (configured in `tsconfig.json`).
+- Always run `npm run lint` and make sure there are no warnings or errors before you are finished with anything
 
 ## Testing Guidelines
 - No automated test runner is configured yet. Use `npm run lint` for CI-level checks.
