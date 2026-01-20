@@ -47,14 +47,14 @@ const HeroSection = () => {
                       Bliv klogere på jeres match <span aria-hidden="true">→</span>
                   </Link>
                 </Button>
-                {/*<Button*/}
-                {/*  size="xl"*/}
-                {/*  variant="outline"*/}
-                {/*  asChild*/}
-                {/*  className="w-full sm:w-auto"*/}
-                {/*>*/}
-                {/*  <Link href="/#howitworks">📩 Skriv dig op på venteliste</Link>*/}
-                {/*</Button>*/}
+                <Button
+                  size="xl"
+                  variant="outline"
+                  asChild
+                  className="w-full sm:w-auto"
+                >
+                  <Link href="/#howitworks">📩 Skriv dig op på venteliste</Link>
+                </Button>
               </div>
             </div>
 
