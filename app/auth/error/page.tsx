@@ -11,11 +11,11 @@ async function ErrorContent({
   return (
     <>
       {params?.error ? (
-        <p className="text-body-sm text-muted-foreground">
+        <p className="text-small text-muted-foreground">
           Fejlkode: {params.error}
         </p>
       ) : (
-        <p className="text-body-sm text-muted-foreground">
+        <p className="text-small text-muted-foreground">
           Der opstod en ukendt fejl.
         </p>
       )}
@@ -34,7 +34,7 @@ export default function Page({
         <div className="flex flex-col gap-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-title">
+              <CardTitle className="text-h3">
                 Beklager, noget gik galt.
               </CardTitle>
             </CardHeader>

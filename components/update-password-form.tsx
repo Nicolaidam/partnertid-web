@@ -46,7 +46,7 @@ export function UpdatePasswordForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-title">Nulstil din adgangskode</CardTitle>
+          <CardTitle className="text-h3">Nulstil din adgangskode</CardTitle>
           <CardDescription>
             Indtast din nye adgangskode herunder.
           </CardDescription>
@@ -65,7 +65,7 @@ export function UpdatePasswordForm({
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              {error && <p className="text-body-sm text-destructive">{error}</p>}
+              {error && <p className="text-small text-destructive">{error}</p>}
               <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? "Gemmer..." : "Gem ny adgangskode"}
               </Button>

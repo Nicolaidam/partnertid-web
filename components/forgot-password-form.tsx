@@ -49,11 +49,11 @@ export function ForgotPasswordForm({
       {success ? (
         <Card>
           <CardHeader>
-            <CardTitle className="text-title">Tjek din e-mail</CardTitle>
+            <CardTitle className="text-h3">Tjek din e-mail</CardTitle>
             <CardDescription>Instruktioner til nulstilling er sendt</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-body-sm text-muted-foreground">
+            <p className="text-small text-muted-foreground">
               Hvis du har registreret dig med e-mail og adgangskode, modtager du
               en mail til nulstilling af adgangskode.
             </p>
@@ -62,7 +62,7 @@ export function ForgotPasswordForm({
       ) : (
         <Card>
           <CardHeader>
-            <CardTitle className="text-title">Nulstil din adgangskode</CardTitle>
+            <CardTitle className="text-h3">Nulstil din adgangskode</CardTitle>
             <CardDescription>
               Indtast din e-mail, og vi sender dig et link til at nulstille din
               adgangskode
@@ -82,12 +82,12 @@ export function ForgotPasswordForm({
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-                {error && <p className="text-body-sm text-destructive">{error}</p>}
+                {error && <p className="text-small text-destructive">{error}</p>}
                 <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? "Sender..." : "Send nulstillingsmail"}
                 </Button>
               </div>
-              <div className="mt-4 text-center text-body-sm">
+              <div className="mt-4 text-center text-small">
                 Har du allerede en konto?{" "}
                 <Link
                   href="/auth/login"

@@ -60,7 +60,7 @@ export function SignUpForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-title">Opret konto</CardTitle>
+          <CardTitle className="text-h3">Opret konto</CardTitle>
           <CardDescription>Opret en ny konto</CardDescription>
         </CardHeader>
         <CardContent>
@@ -101,12 +101,12 @@ export function SignUpForm({
                   onChange={(e) => setRepeatPassword(e.target.value)}
                 />
               </div>
-              {error && <p className="text-body-sm text-destructive">{error}</p>}
+              {error && <p className="text-small text-destructive">{error}</p>}
               <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? "Opretter konto..." : "Opret konto"}
               </Button>
             </div>
-            <div className="mt-4 text-center text-body-sm">
+            <div className="mt-4 text-center text-small">
               Har du allerede en konto?{" "}
               <Link href="/auth/login" className="underline underline-offset-4">
                 Log ind

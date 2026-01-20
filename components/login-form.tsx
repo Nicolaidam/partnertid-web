@@ -51,7 +51,7 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-title">Log ind</CardTitle>
+          <CardTitle className="text-h3">Log ind</CardTitle>
           <CardDescription>
             Indtast din e-mail herunder for at logge ind til din konto
           </CardDescription>
@@ -75,7 +75,7 @@ export function LoginForm({
                   <Label htmlFor="password">Adgangskode</Label>
                   <Link
                     href="/auth/forgot-password"
-                    className="ml-auto inline-block text-body-sm underline-offset-4 hover:underline"
+                    className="ml-auto inline-block text-small underline-offset-4 hover:underline"
                   >
                     Glemt din adgangskode?
                   </Link>
@@ -88,12 +88,12 @@ export function LoginForm({
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              {error && <p className="text-body-sm text-destructive">{error}</p>}
+              {error && <p className="text-small text-destructive">{error}</p>}
               <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? "Logger ind..." : "Log ind"}
               </Button>
             </div>
-            <div className="mt-4 text-center text-body-sm">
+            <div className="mt-4 text-center text-small">
               Har du ikke en konto?{" "}
               <Link
                 href="/auth/sign-up"

@@ -13,13 +13,13 @@ export default function Page() {
         <div className="flex flex-col gap-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-title">
+              <CardTitle className="text-h3">
                 Tak for din tilmelding!
               </CardTitle>
               <CardDescription>Tjek din e-mail for at godkende</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-body-sm text-muted-foreground">
+              <p className="text-small text-muted-foreground">
                 Du er nu oprettet. Tjek din e-mail for at godkende din konto,
                 inden du logger ind.
               </p>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Heart } from 'lucide-react';
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -22,17 +22,24 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="shrink-0">
               <Link href="/" className="flex items-center">
-                <Heart className="mr-1 size-5 text-brand-warm" strokeWidth={1.5} />
-                <p className="text-body-sm font-normal uppercase tracking-wide text-foreground/60">
+                <Image
+                  src="/partnertid_icon.png"
+                  alt="Partnertid"
+                  width={20}
+                  height={20}
+                  className="mr-2 size-5"
+                  priority
+                />
+                <span className="ui-caption">
                   Partnertid
-                </p>
+                </span>
               </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/#features" className="nav-link text-lead">Funktioner</Link>
-                <Link href="/#howitworks" className="nav-link text-lead">Sådan virker det</Link>
-                <Link href="/#pricing" className="nav-link text-lead">Pris</Link>
+                <Link href="/#features" className="nav-link">Funktioner</Link>
+                <Link href="/#howitworks" className="nav-link">Sådan virker det</Link>
+                <Link href="/#pricing" className="nav-link">Pris</Link>
               </div>
             </div>
           </div>
@@ -90,9 +97,9 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="space-y-1 bg-card px-2 pb-3 pt-2 shadow-lg sm:px-3">
-          <Link href="/#features" className="nav-link block text-subtitle">Funktioner</Link>
-          <Link href="/#howitworks" className="nav-link block text-subtitle">Sådan virker det</Link>
-          <Link href="/#pricing" className="nav-link block text-subtitle">Pris</Link>
+          <Link href="/#features" className="nav-link block text-h4">Funktioner</Link>
+          <Link href="/#howitworks" className="nav-link block text-h4">Sådan virker det</Link>
+          <Link href="/#pricing" className="nav-link block text-h4">Pris</Link>
           <div className="mt-4 flex flex-col space-y-2 border-t pt-2">
             <Button variant="outline" className="border-2" asChild>
               <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>

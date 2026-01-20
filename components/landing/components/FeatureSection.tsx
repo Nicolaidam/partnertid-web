@@ -60,7 +60,7 @@ const FeatureSection = () => {
           <h2 className="mb-4">
             Træn jeres forhold hver uge
           </h2>
-          <p className="mx-auto max-w-2xl text-lead text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-body text-muted-foreground">
             Partnertid skaber rammerne for forebyggende vedligeholdelse af jeres forhold. Ligesom træning eller en vitaminpille – 
             en ugentlig rutine der styrker jeres forbindelse, før problemer opstår.
           </p>
@@ -69,9 +69,9 @@ const FeatureSection = () => {
         <div className="space-y-12">
           {featureCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              <h4 className="mb-6 text-center">
+              <h3 className="ui-caption mb-6 text-center">
                 {category.category}
-              </h4>
+              </h3>
               <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
                 {category.features.map((feature, featureIndex) => (
                   <Card
@@ -80,7 +80,7 @@ const FeatureSection = () => {
                   >
                     <CardHeader className="pb-3">
                       <div className="mb-3">{feature.icon}</div>
-                      <CardTitle className="text-subtitle">{feature.title}</CardTitle>
+                      <CardTitle>{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-body leading-relaxed">

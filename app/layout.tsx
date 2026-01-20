@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Cormorant_Garamond, Raleway} from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import React from "react";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`

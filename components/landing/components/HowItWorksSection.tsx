@@ -45,7 +45,7 @@ const HowItWorksSection = () => {
           <h1>
             Jeres ugentlige <span className="text-brand-warm">rutine</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-subtitle text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-body text-muted-foreground">
             Ligesom du tager en vitaminpille hver dag, er Partnertid jeres ugentlige check-in. 
             En fast rutine der styrker jeres forhold gennem konsistent praksis.
           </p>
@@ -72,7 +72,7 @@ const HowItWorksSection = () => {
                     <div>
                       <div className="mb-2 flex items-center">
                         <span className="mr-3">{step.icon}</span>
-                        <h3 className="text-lead font-normal tracking-emphasis text-foreground">
+                        <h3 className="text-body font-normal tracking-emphasis text-foreground">
                           {step.title}
                         </h3>
                       </div>
@@ -89,20 +89,20 @@ const HowItWorksSection = () => {
           <div className="col-span-1 animate-scale-in" style={{ animationDelay: "0.5s" }}>
             <Card className="h-full overflow-hidden border border-brand-sand/30 bg-gradient-to-br from-card to-brand-sand/10 shadow-md">
               <CardHeader className="pb-2">
-                <CardTitle className="text-subtitle font-normal tracking-emphasis">Eksempel på ugentlig check-in</CardTitle>
+                <CardTitle className="text-body">Eksempel på ugentlig check-in</CardTitle>
                 <CardDescription>Se hvordan jeres ugentlige rutine kan se ud</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <Card className="animate-fade-in border border-brand-sand/50 bg-card/80 shadow-sm" style={{ animationDelay: "0.7s" }}>
                   <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center text-body-sm font-normal tracking-label text-brand-warm">
+                    <CardTitle className="flex items-center text-small font-normal tracking-label text-brand-warm">
                       <MessageCircle className="mr-2 size-4" />
                       Samtalepunkter
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <ul className="space-y-3">
-                      <li className="rounded-lg border border-muted/50 bg-muted/30 p-3 text-body-sm">
+                      <li className="rounded-lg border border-muted/50 bg-muted/30 p-3 text-small">
                         <p className="italic text-foreground">
                           &quot;I har begge udtrykt et ønske om mere nærvær i hverdagen. Hvordan ser meningsfuld tid sammen ud for hver af jer?&quot;
                         </p>
@@ -113,15 +113,15 @@ const HowItWorksSection = () => {
 
                 <Card className="animate-fade-in border border-brand-sand/50 bg-card/80 shadow-sm" style={{ animationDelay: "0.9s" }}>
                   <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center text-body-sm font-normal tracking-label text-brand-green">
+                    <CardTitle className="flex items-center text-small font-normal tracking-label text-brand-green">
                       <Users className="mr-2 size-4" />
                       Fælles udforskning
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <div className="rounded-lg border border-muted/50 bg-muted/30 p-3 text-body-sm">
+                    <div className="rounded-lg border border-muted/50 bg-muted/30 p-3 text-small">
                       <p className="font-medium">Dybdelytning: 2x10 minutter</p>
-                      <p className="mt-1 text-body-sm text-muted-foreground">
+                      <p className="mt-1 text-small text-muted-foreground">
                         Tag på skift 10 minutter til at dele noget, der betyder noget for dig.
                       </p>
                     </div>
@@ -130,13 +130,13 @@ const HowItWorksSection = () => {
 
                 <Card className="animate-fade-in border border-brand-sand/50 bg-card/80 shadow-sm" style={{ animationDelay: "1.1s" }}>
                   <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center text-body-sm font-normal tracking-label text-brand-terracotta">
+                    <CardTitle className="flex items-center text-small font-normal tracking-label text-brand-terracotta">
                       <Sparkles className="mr-2 size-4" />
                       Fælles refleksion
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <div className="rounded-lg border border-muted/50 bg-muted/30 p-3 text-body-sm">
+                    <div className="rounded-lg border border-muted/50 bg-muted/30 p-3 text-small">
                       <p>
                         &quot;Denne uge viser jeres refleksioner en fælles bevægelse mod mere åbenhed.&quot;
                       </p>

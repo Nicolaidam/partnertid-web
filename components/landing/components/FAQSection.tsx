@@ -57,10 +57,10 @@ const FAQSection = () => {
           <div className="mb-6 inline-flex items-center justify-center rounded-full bg-brand-warm/10 p-3">
             <HelpCircle className="size-6 text-brand-warm" />
           </div>
-          <h2 className="mb-4 text-section-title text-foreground md:text-display">
+          <h2 className="mb-4 text-h2 text-foreground md:text-h1">
             Ofte stillede spørgsmål
           </h2>
-          <p className="mx-auto max-w-2xl text-lead text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-body text-muted-foreground">
             Her er svar på nogle af de spørgsmål, vi ofte får fra kvinder, der overvejer at starte med Partnertid.
           </p>
         </div>
@@ -73,10 +73,10 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="rounded-lg border border-border/50 bg-card px-4 shadow-sm transition-shadow hover:shadow-md md:px-6"
               >
-                <AccordionTrigger className="min-h-11 py-4 text-left text-body font-normal text-foreground hover:no-underline md:py-6 md:text-lead">
+                <AccordionTrigger className="min-h-11 py-4 text-left text-body font-normal text-foreground hover:no-underline md:py-6 md:text-body">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-4 text-body-sm leading-relaxed text-muted-foreground md:pb-6 md:text-body">
+                <AccordionContent className="pb-4 text-small leading-relaxed text-muted-foreground md:pb-6 md:text-body">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
