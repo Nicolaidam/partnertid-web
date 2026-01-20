@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="fixed z-50 w-full bg-background/80 shadow-sm backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 items-center justify-between sm:h-16">
           <div className="flex items-center">
             <div className="shrink-0">
               <Link href="/" className="flex items-center">
@@ -30,22 +30,22 @@ const Navbar = () => {
                   className="mr-2 size-5"
                   priority
                 />
-                <span className="ui-caption">
+                <span className="ui-caption text-xs sm:text-sm lg:text-base">
                   Partnertid
                 </span>
               </Link>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/#features" className="nav-link">Funktioner</Link>
-                <Link href="/#howitworks" className="nav-link">Sådan virker det</Link>
-                <Link href="/#pricing" className="nav-link">Pris</Link>
-              </div>
-            </div>
+            {/*<div className="hidden lg:block">*/}
+            {/*  <div className="ml-8 flex items-baseline space-x-4 lg:ml-10 lg:space-x-6">*/}
+            {/*    <Link href="/#features" className="nav-link">Funktioner</Link>*/}
+            {/*    <Link href="/#howitworks" className="nav-link">Sådan virker det</Link>*/}
+            {/*    <Link href="/#pricing" className="nav-link">Pris</Link>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center">
-              <Button variant="outline" className="mr-3 border-2" asChild>
+          <div className="hidden lg:block">
+            <div className="ml-4 flex items-center gap-2 lg:gap-3">
+              <Button variant="outline" className="border-2" asChild>
                 <Link href="/auth/login">Log ind</Link>
               </Button>
               <Button asChild>
@@ -53,9 +53,11 @@ const Navbar = () => {
               </Button>
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
               className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
             >
               <span className="sr-only">Open main menu</span>
@@ -95,11 +97,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div className="space-y-1 bg-card px-2 pb-3 pt-2 shadow-lg sm:px-3">
-          <Link href="/#features" className="nav-link block text-h4">Funktioner</Link>
-          <Link href="/#howitworks" className="nav-link block text-h4">Sådan virker det</Link>
-          <Link href="/#pricing" className="nav-link block text-h4">Pris</Link>
+      <div id="mobile-menu" className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
+        <div className="space-y-1 bg-card px-4 pb-4 pt-3 shadow-lg sm:px-6">
+          <Link href="/#features" className="nav-link block py-3 text-body" onClick={() => setIsMenuOpen(false)}>Funktioner</Link>
+          <Link href="/#howitworks" className="nav-link block py-3 text-body" onClick={() => setIsMenuOpen(false)}>Sådan virker det</Link>
+          <Link href="/#pricing" className="nav-link block py-3 text-body" onClick={() => setIsMenuOpen(false)}>Pris</Link>
           <div className="mt-4 flex flex-col space-y-2 border-t pt-2">
             <Button variant="outline" className="border-2" asChild>
               <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>
@@ -107,8 +109,8 @@ const Navbar = () => {
               </Link>
             </Button>
             <Button asChild>
-              <Link href="/auth/sign-up" onClick={() => setIsMenuOpen(false)}>
-                Kom i gang
+              <Link href="/partnertesten" onClick={() => setIsMenuOpen(false)}>
+                Tag testen her
               </Link>
             </Button>
           </div>

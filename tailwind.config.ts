@@ -77,7 +77,7 @@ export default {
 				h2: ['clamp(2.0rem, 2.7vw, 2.1rem)', { lineHeight: '1.2', letterSpacing: '0.015em' }],
 				h3: ['1.375rem', { lineHeight: '1.3' }],
 				h4: ['0.7875rem', { lineHeight: '1.5', letterSpacing: '0.02em' }],
-				body: ['1rem', { lineHeight: '1.6' }],
+				body: ['clamp(0.95rem, 1.2vw, 1rem)', { lineHeight: '1.6' }],
 				small: ['0.8125rem', { lineHeight: '1.6' }],
 				caption: ['0.6875rem', { lineHeight: '1.5', letterSpacing: '0.02em' }],
 			},
