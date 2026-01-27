@@ -1,7 +1,53 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export function ComingSoon() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
+    "idle"
+  );
+  const [message, setMessage] = useState("");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("loading");
+    setMessage("");
+
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail) {
+      setStatus("error");
+      setMessage("Skriv venligst en emailadresse.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmedEmail }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        setStatus("error");
+        setMessage(result.message ?? "Noget gik galt. Prøv igen.");
+        return;
+      }
+
+      setStatus("success");
+      setMessage("✅ Tak! Du er nu skrevet op.");
+      setEmail("");
+    } catch {
+      setStatus("error");
+      setMessage("Noget gik galt. Prøv igen.");
+    }
+  }
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-background">
       <div className="pointer-events-none absolute inset-0">
@@ -31,7 +77,7 @@ export function ComingSoon() {
                 Vi sender kun en kort besked, når vi er klar til at byde jer
                 indenfor.
               </p>
-              <div className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <label
                   className="text-small font-medium text-foreground/80"
                   htmlFor="mce-EMAIL"
@@ -47,11 +93,27 @@ export function ComingSoon() {
                     required
                     placeholder="navn@eksempel.dk"
                     className="h-11 bg-background"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    disabled={status === "loading"}
                   />
-                  <Button type="button" size="lg" className="h-11">
-                    Skriv mig op
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="h-11"
+                    disabled={status === "loading"}
+                  >
+                    {status === "loading" ? "Sender..." : "Skriv mig op"}
                   </Button>
                 </div>
+                {message ? (
+                  <p
+                    className={`text-small ${status === "error" ? "text-red-500" : "text-foreground/70"}`}
+                    aria-live="polite"
+                  >
+                    {message}
+                  </p>
+                ) : null}
                 <p className="text-small text-foreground/60">
                   Alternativt kan du skrive direkte til{" "}
                   <a
@@ -62,7 +124,7 @@ export function ComingSoon() {
                   </a>
                   .
                 </p>
-              </div>
+              </form>
             </div>
           </section>
         </div>

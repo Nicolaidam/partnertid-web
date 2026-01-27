@@ -45,7 +45,8 @@ export async function updateSession(request: NextRequest) {
     path.startsWith("/landing") ||
     path.startsWith("/partnertesten") ||
     path.startsWith("/login") ||
-    path.startsWith("/auth");
+    path.startsWith("/auth") ||
+    path.startsWith("/api/subscribe");
 
   if (!user && !isPublicPath) {
     // no user, potentially respond by redirecting the user to the login page
