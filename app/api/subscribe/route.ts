@@ -35,7 +35,6 @@ export async function POST(request: Request) {
   const { data, error } = await resend.contacts.create({
     email,
     unsubscribed: false,
-    segments: [{ id: segmentId }],
   });
 
   if (error) {
@@ -54,6 +53,15 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ message: error.message }, { status: 400 });
+  }
+
+  const { error: segmentError } = await resend.contacts.segments.add({
+    email,
+    segmentId,
+  });
+
+  if (segmentError) {
+    return NextResponse.json({ message: segmentError.message }, { status: 400 });
   }
 
   return NextResponse.json({ ok: true, data });
