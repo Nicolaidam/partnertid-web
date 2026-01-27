@@ -204,7 +204,7 @@ export default function PartnertestenHome() {
             <div>
               <p className="ui-caption">Partnertesten</p>
               <h1 className="mt-4">
-                Hvilken fugl er du i dit parfhold?
+                Hvilken fugl er du i dit parforhold?
               </h1>
               <div className="mt-6 space-y-4 text-body text-foreground/70">
                 <p>Måske har du følelsen af, at I er skabt for hinanden.</p>
