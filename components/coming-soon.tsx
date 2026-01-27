@@ -63,8 +63,8 @@ export function ComingSoon() {
               Under udvikling
               <span className="size-2 rounded-full bg-primary" aria-hidden="true" />
             </span>
-            <h1 className="text-h1 text-foreground">Partnertid er på vej.</h1>
-            <p className="max-w-xl text-body text-foreground/70">
+            <h1>Partnertid er på vej.</h1>
+            <p className="max-w-xl">
               👉 Vi er i gang med at skabe Partnertid – en moderne platform for
               online parterapi. Tilmeld dig her og vær blandt de første, der får
               adgang, når vi åbner.
@@ -72,8 +72,8 @@ export function ComingSoon() {
           </section>
           <section className="rounded-2xl border border-border bg-card/90 p-6 shadow-[0_30px_80px_-60px_rgba(0,0,0,0.45)] backdrop-blur">
             <div className="space-y-4">
-              <h2 className="text-h3 text-foreground">Skriv dig op på email</h2>
-              <p className="text-body text-foreground/70">
+              <h2>Skriv dig op på email</h2>
+              <p>
                 Vi sender kun en kort besked, når vi er klar til at byde jer
                 indenfor.
               </p>
@@ -114,7 +114,7 @@ export function ComingSoon() {
                     {message}
                   </p>
                 ) : null}
-                <p className="text-small text-foreground/60">
+                <p className="text-small">
                   Alternativt kan du skrive direkte til{" "}
                   <a
                     className="font-semibold text-primary"

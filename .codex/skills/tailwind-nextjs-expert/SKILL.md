@@ -65,6 +65,7 @@ Implement UI with Tailwind and semantic tokens while keeping the design system s
 
 - Keep base styles minimal.
 - Avoid dumping shared patterns that are not reused.
+- Rely on `globals.css` for base styles on native elements (e.g., `p`, `h1`–`h6`, `a`, `button`) when available. If those elements already have global styling, omit typography/color classes and only add utility classes for layout or spacing (e.g., prefer `<h2>Title</h2>` over `<h2 className="text-h3 text-foreground">Title</h2>`, and `<p className="max-w-xl">…</p>` over `<p className="max-w-xl text-body text-foreground/70">…</p>`).
 
 ## Final Check
 
